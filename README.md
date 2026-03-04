@@ -1,70 +1,165 @@
-# Getting Started with Create React App
+# Currency Converter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and responsive **Currency Converter Web Application** built using **React.js**.
+The application allows users to convert an amount from one currency to another using **live exchange rate data fetched from an external API**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# 🚀 Features
 
-### `npm start`
+### 1️⃣ Currency Selection
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Users can select both **source currency** and **target currency** from dropdown menus.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2️⃣ Bidirectional Conversion
 
-### `npm test`
+Users can enter the amount in **either input field**.
+Updating one value automatically updates the other.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3️⃣ Live Exchange Rate Display
 
-### `npm run build`
+The application displays the **current exchange rate** between the selected currencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+1 USD = 83.20 INR
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4️⃣ Dynamic Data Fetching
 
-### `npm run eject`
+Currency names and exchange rates are **fetched dynamically from an API** instead of being hardcoded.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 5️⃣ Swap Currencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Users can easily **swap the source and destination currencies**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 6️⃣ Responsive UI
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The interface works smoothly on **desktop and mobile screens**.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 🛠️ Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* **React.js**
+* **JavaScript (ES6)**
+* **HTML5**
+* **CSS3**
+* **Exchange Rate API**
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 📡 API Used
 
-### Analyzing the Bundle Size
+Exchange rate data is fetched from:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+https://api.exchangerate-api.com/v4/latest/USD
+```
 
-### Making a Progressive Web App
+This API provides real-time exchange rates for multiple currencies.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+# 📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+currency-converter-react
+│
+├── public
+│
+├── src
+│   ├── components
+│   │   ├── Converter.js
+│   │   └── CurrencyInput.js
+│   │
+│   ├── api.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.css
+│
+├── package.json
+└── README.md
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# ⚙️ Installation & Setup
 
-### `npm run build` fails to minify
+Follow these steps to run the project locally.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1️⃣ Clone the repository
+
+```
+git clone https://github.com/vivekkk06/currency-converter-react.git
+```
+
+### 2️⃣ Navigate to the project directory
+
+```
+cd currency-converter-react
+```
+
+### 3️⃣ Install dependencies
+
+```
+npm install
+```
+
+### 4️⃣ Run the development server
+
+```
+npm start
+```
+
+The application will start at:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🧠 How the Conversion Works
+
+The conversion is calculated using the formula:
+
+```
+Converted Amount = (Amount / Rate_from) × Rate_to
+```
+
+Where:
+
+* **Rate_from** = exchange rate of source currency
+* **Rate_to** = exchange rate of target currency
+
+---
+
+# 📱 UI Features
+
+* Clean card-based layout
+* Gradient background
+* Responsive design
+* Interactive input fields
+* Smooth button hover effects
+
+---
+
+# 📌 Future Improvements
+
+Possible enhancements:
+
+* Currency **flag icons**
+* **Searchable currency dropdown**
+* **Dark mode**
+* **Historical exchange rate charts**
+* **Offline caching of exchange rates**
+
+---
+
+# 👨‍💻 Author
+
+**Vivek Badgujar**
+
+---
