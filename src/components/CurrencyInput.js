@@ -2,9 +2,12 @@ import React from "react";
 
 function CurrencyInput({ amount, currency, currencies, onAmountChange, onCurrencyChange }) {
   return (
-    <div className="currency-box">
+    <div className="currency-field">
 
-      <select value={currency} onChange={(e) => onCurrencyChange(e.target.value)}>
+      <select
+        value={currency}
+        onChange={(e) => onCurrencyChange(e.target.value)}
+      >
         {currencies.map((curr) => (
           <option key={curr} value={curr}>
             {curr}
@@ -16,6 +19,7 @@ function CurrencyInput({ amount, currency, currencies, onAmountChange, onCurrenc
         type="number"
         value={amount}
         onChange={(e) => onAmountChange(e.target.value)}
+        placeholder="Enter amount"
       />
 
     </div>

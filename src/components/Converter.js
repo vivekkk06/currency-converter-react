@@ -45,30 +45,37 @@ function Converter() {
   return (
     <div className="converter">
 
-      <h2>Currency Converter</h2>
+      <h2>💱 Currency Converter</h2>
 
-      <CurrencyInput
-        amount={fromAmount}
-        currency={fromCurrency}
-        currencies={currencies}
-        onAmountChange={setFromAmount}
-        onCurrencyChange={setFromCurrency}
-      />
+      <div className="section">
+        <label>From</label>
+        <CurrencyInput
+          amount={fromAmount}
+          currency={fromCurrency}
+          currencies={currencies}
+          onAmountChange={setFromAmount}
+          onCurrencyChange={setFromCurrency}
+        />
+      </div>
 
-      <button onClick={swapCurrencies}>Swap</button>
+      <button className="swap-btn" onClick={swapCurrencies}>
+        ⇅
+      </button>
 
-      <CurrencyInput
-        amount={toAmount}
-        currency={toCurrency}
-        currencies={currencies}
-        onAmountChange={handleToAmountChange}
-        onCurrencyChange={setToCurrency}
-      />
+      <div className="section">
+        <label>To</label>
+        <CurrencyInput
+          amount={toAmount}
+          currency={toCurrency}
+          currencies={currencies}
+          onAmountChange={handleToAmountChange}
+          onCurrencyChange={setToCurrency}
+        />
+      </div>
 
-      <p>
-        Exchange Rate: 1 {fromCurrency} ={" "}
-        {(rates[toCurrency] / rates[fromCurrency]).toFixed(4)} {toCurrency}
-      </p>
+      <div className="rate-box">
+        1 {fromCurrency} = {(rates[toCurrency] / rates[fromCurrency]).toFixed(4)} {toCurrency}
+      </div>
 
     </div>
   );
