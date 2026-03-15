@@ -1,0 +1,86 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="spotlight" cx="62%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c0c0c0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#888" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metal1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8e8e8"/>
+      <stop offset="30%" stop-color="#b0b0b0"/>
+      <stop offset="60%" stop-color="#d4d4d4"/>
+      <stop offset="100%" stop-color="#7a7a7a"/>
+    </linearGradient>
+    <linearGradient id="metal2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8c8c8"/>
+      <stop offset="40%" stop-color="#888"/>
+      <stop offset="70%" stop-color="#bbb"/>
+      <stop offset="100%" stop-color="#555"/>
+    </linearGradient>
+    <linearGradient id="metal3" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#d8d8d8"/>
+      <stop offset="50%" stop-color="#909090"/>
+      <stop offset="100%" stop-color="#606060"/>
+    </linearGradient>
+    <linearGradient id="metal4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="45%" stop-color="#9a9a9a"/>
+      <stop offset="100%" stop-color="#5a5a5a"/>
+    </linearGradient>
+    <filter id="shadow1">
+      <feDropShadow dx="6" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="shadow2">
+      <feDropShadow dx="4" dy="6" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Deep black background -->
+  <rect width="680" height="380" fill="#0a0a0a" style="fill:rgb(10, 10, 10);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Subtle surface reflection gradient at bottom -->
+  <rect width="680" height="380" fill="url(#spotlight)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Floor reflection line -->
+  <ellipse cx="370" cy="330" rx="200" ry="18" fill="#1a1a1a" opacity="0.8" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.8;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Glow behind symbols -->
+  <ellipse cx="370" cy="240" rx="180" ry="80" fill="url(#glow1)" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- POUND SYMBOL (back left, tilted) -->
+  <g filter="url(#shadow1)" transform="translate(200,170) rotate(-18) scale(0.9)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <!-- £ symbol using paths -->
+    <text font-family="Georgia, serif" font-size="130" font-weight="900" fill="url(#metal2)" opacity="0.85" x="0" y="0" text-anchor="middle" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.85;font-family:Georgia, serif;font-size:130px;font-weight:900;text-anchor:middle;dominant-baseline:auto">£</text>
+  </g>
+
+  <!-- EURO SYMBOL (center-left, slight tilt) -->
+  <g filter="url(#shadow1)" transform="translate(305,185) rotate(-8)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <text font-family="Georgia, serif" font-size="145" font-weight="900" fill="url(#metal1)" x="0" y="0" text-anchor="middle" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, serif;font-size:145px;font-weight:900;text-anchor:middle;dominant-baseline:auto">€</text>
+  </g>
+
+  <!-- DOLLAR SYMBOL (center, prominent) -->
+  <g filter="url(#shadow2)" transform="translate(400,175) rotate(5)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <text font-family="Georgia, serif" font-size="150" font-weight="900" fill="url(#metal3)" x="0" y="0" text-anchor="middle" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, serif;font-size:150px;font-weight:900;text-anchor:middle;dominant-baseline:auto">$</text>
+  </g>
+
+  <!-- YEN SYMBOL (back right, tilted) -->
+  <g filter="url(#shadow2)" transform="translate(510,180) rotate(12) scale(0.85)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <text font-family="Georgia, serif" font-size="135" font-weight="900" fill="url(#metal4)" opacity="0.9" x="0" y="0" text-anchor="middle" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:Georgia, serif;font-size:135px;font-weight:900;text-anchor:middle;dominant-baseline:auto">¥</text>
+  </g>
+
+  <!-- Spotlight cone from upper right -->
+  <ellipse cx="540" cy="0" rx="220" ry="140" fill="#ffffff" opacity="0.055" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.055;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Reflection shadows on floor -->
+  <ellipse cx="230" cy="320" rx="55" ry="10" fill="#000" opacity="0.45" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.45;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <ellipse cx="330" cy="328" rx="60" ry="10" fill="#000" opacity="0.4" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <ellipse cx="415" cy="326" rx="58" ry="10" fill="#000" opacity="0.38" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.38;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <ellipse cx="510" cy="320" rx="48" ry="9" fill="#000" opacity="0.38" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.38;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Subtle floor line -->
+  <line x1="80" y1="310" x2="620" y2="310" stroke="#2a2a2a" stroke-width="1" opacity="0.6" style="fill:rgb(0, 0, 0);stroke:rgb(42, 42, 42);color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+</svg>

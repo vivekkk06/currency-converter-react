@@ -1,107 +1,244 @@
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+
+.App{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
 }
 
-/* Card */
-.converter {
-  background: white;
-  padding: 35px;
-  border-radius: 16px;
-  width: 360px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  text-align: center;
-  transition: transform 0.2s ease;
+/* Glass card */
+
+.converter{
+  width:380px;
+  padding:35px;
+  border-radius:16px;
+  background:rgba(23, 23, 23, 0.66);
+  backdrop-filter:blur(15px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.4);
+  text-align:center;
+  transition:transform .3s ease;
 }
 
-.converter:hover {
-  transform: translateY(-4px);
+/* .converter:hover{
+  transform:translateY(-5px);
+} */
+
+/* Title */
+
+.title{
+  font-size:26px;
+  margin-bottom:5px;
+  color:white;
 }
 
-.converter h2 {
-  margin-bottom: 25px;
-  color: #333;
+.subtitle{
+  font-size:14px;
+  color:#ddd;
+  margin-bottom:25px;
 }
 
-/* Section */
-.section {
-  text-align: left;
+/* Form section */
+
+.section{
+  text-align:left;
+  margin-bottom:15px;
 }
 
-.section label {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 5px;
-  display: block;
-}
-
-/* Currency input */
-.currency-box {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+.section label{
+  font-size:13px;
+  color:#eee;
+  margin-bottom:5px;
+  display:block;
 }
 
 /* Inputs */
-select,
-input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+
+.currency-field{
+  display:flex;
+  gap:10px;
 }
 
-select:focus,
-input:focus {
-  outline: none;
-  border-color: #4facfe;
-  box-shadow: 0 0 5px rgba(79,172,254,0.5);
+select,input{
+  flex:1;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  font-size:14px;
+  background:rgba(255,255,255,0.85);
 }
 
 /* Swap button */
-.swap-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background: linear-gradient(135deg,#4facfe,#00c6ff);
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  margin: 10px auto;
-  display: block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+.swap-btn{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:none;
+  background:#2aa9e0;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  margin:12px auto;
+  transition:all .3s ease;
 }
 
-.swap-btn:hover {
-  transform: rotate(180deg);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.swap-btn:hover{
+  transform:rotate(180deg) scale(1.1);
+  background:#1d8dc2;
 }
 
-/* Exchange rate */
-.rate-box {
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 8px;
-  background: #f5f7ff;
-  font-weight: 500;
-  color: #444;
+/* Rate info */
+
+.rate-box{
+  margin-top:15px;
+  background:rgba(255,255,255,0.85);
+  padding:12px;
+  border-radius:10px;
+  font-size:14px;
+  color:#333;
 }
 
 /* Responsive */
+
+@media(max-width:500px){
+  .converter{
+    width:90%;
+  }
+  .currency-field{
+    flex-direction:column;
+  }
+}
+
+/* ========================================
+   TICKER BAR
+   ======================================== */
+
+.ticker-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1000;
+  gap: 0;
+}
+
+.ticker-label {
+  flex-shrink: 0;
+  padding: 0 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #2aa9e0;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(42, 169, 224, 0.08);
+}
+
+.ticker-track-wrapper {
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ticker-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px;
+}
+
+.ticker-pair {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+}
+
+.ticker-rate {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  font-variant-numeric: tabular-nums;
+}
+
+.ticker-change {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.ticker-change.up {
+  color: #4ade80;
+}
+
+.ticker-change.down {
+  color: #f87171;
+}
+
+.ticker-sep {
+  color: rgba(255,255,255,0.12);
+  font-size: 11px;
+  margin-left: 6px;
+}
+
+.ticker-time {
+  flex-shrink: 0;
+  padding: 0 12px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.25);
+  border-left: 1px solid rgba(255,255,255,0.08);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.ticker-loading {
+  padding: 0 20px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.06em;
+}
+
+/* Push content below the fixed ticker bar */
+.App {
+  padding-top: 36px;
+}
+
 @media (max-width: 500px) {
-
-  .converter {
-    width: 90%;
-    padding: 25px;
+  .ticker-time {
+    display: none;
   }
-
-  .currency-box {
-    flex-direction: column;
+  .ticker-label {
+    padding: 0 10px;
+    font-size: 9px;
   }
-
 }

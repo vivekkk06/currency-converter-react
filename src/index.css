@@ -1,28 +1,31 @@
-/* Reset & Base Styling */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+html,body{
+  height:100%;
+  min-height:100vh;
+}
+body{
+  margin:0;
+  padding:0;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family:'Segoe UI',sans-serif;
 
-  /* Gradient background */
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height:100vh;
 
-  min-height: 100vh;
+  background-image:url("./currency_hero_banner.svg");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  /* text-shadow:0 1px 3px rgba(0,0,0,0.7); */
 }
 
-/* Code block styling (default React) */
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Remove number arrows */
 
-/* Remove default input arrows in some browsers */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance:none;
+  margin:0;
 }

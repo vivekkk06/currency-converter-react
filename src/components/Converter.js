@@ -19,7 +19,6 @@ function Converter() {
       setRates(data);
       setCurrencies(Object.keys(data));
     }
-
     loadRates();
   }, []);
 
@@ -45,7 +44,11 @@ function Converter() {
   return (
     <div className="converter">
 
-      <h2>💱 Currency Converter</h2>
+      <h1 className="title">💱 Currency Converter</h1>
+
+      <p className="subtitle">
+        Convert currencies instantly using live exchange rates.
+      </p>
 
       <div className="section">
         <label>From</label>
@@ -74,7 +77,10 @@ function Converter() {
       </div>
 
       <div className="rate-box">
-        1 {fromCurrency} = {(rates[toCurrency] / rates[fromCurrency]).toFixed(4)} {toCurrency}
+        <strong>Exchange Rate</strong>
+        <p>
+          1 {fromCurrency} = {(rates[toCurrency] / rates[fromCurrency]).toFixed(4)} {toCurrency}
+        </p>
       </div>
 
     </div>
